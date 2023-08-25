@@ -30,3 +30,4 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 });
 
 Route::post('/payment', [PaymentController::class, 'create']);
+Route::post('/webhook/midtrans', [PaymentController::class, 'webhook']);
